@@ -19,9 +19,10 @@ int main (int argc, char** argv) {
     string buf;
 
     cout << ":: Interactive Rule-based Generator v" << VER_MAJOR << "." << VER_MINOR << " ::" << endl << endl;
-    cout << "Exit... type q" << endl;
-    cout << "Generate... !<RULE> to generate an object of <RULE> type." << endl;
-    cout << "Define rule... RULE->SYMBOL,ANOTHERSYMBOL,YETANOTHERSYMBOL" << endl;
+    cout << "To exit type 'q'" << endl;
+    cout << "Define a rule... RuleName->Symbol,AnotherSymbol,YetAnotherSymbol" << endl;
+    cout << "Generate... !RuleName to generate an object of that type." << endl;
+    
     cout << endl;
     cout << "* Enter a seed: ";
     string seed;
@@ -38,7 +39,7 @@ int main (int argc, char** argv) {
 
         if(buf.size()<1)
             continue;
-        if(buf[0]=='q') {
+        if(buf[0]=='q' && buf.length() == 1) {
             break;
         } else if(buf[0]=='!') {
             // generate
