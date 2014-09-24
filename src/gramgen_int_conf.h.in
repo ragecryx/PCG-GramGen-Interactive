@@ -1,0 +1,9 @@
+#ifndef GRAMGEN_INT_CONF_H
+#define GRAMGEN_INT_CONF_H
+
+#define VER_MAJOR @VERSION_MAJOR@
+#define VER_MINOR @VERSION_MINOR@
+
+#cmakedefine DEBUG
+
+#endif
