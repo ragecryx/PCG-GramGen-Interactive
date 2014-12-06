@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 2.6)
 project(PCGGramGen-Interactive)
 
 set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/DIST")
-set(CMAKE_CXX_FLAGS "-std=c++11 -static-libgcc -static-libstdc++ ${CMAKE_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS "-std=c++11 -static-libgcc -ggdb -static-libstdc++ ${CMAKE_CXX_FLAGS}")
 
 # Options
 
