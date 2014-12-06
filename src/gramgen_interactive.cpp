@@ -9,19 +9,28 @@ using namespace std;
 
 using namespace PCGGrammar;
 
+
+
 #include "gramgen_int_conf.h"
+
+
 
 static const string RULE_DELIMETER = "->";
 static const string SYMBOL_DELIMETER = ",";
+static const string WEIGHT_DELIMETER = "%";
+
+
 
 int main (int argc, char** argv) {
 
     string buf;
 
     cout << ":: Interactive Rule-based Generator v" << VER_MAJOR << "." << VER_MINOR << " ::" << endl << endl;
-    cout << "To exit type 'q'" << endl;
-    cout << "Define a rule... RuleName->Symbol,AnotherSymbol,YetAnotherSymbol" << endl;
-    cout << "Generate... !RuleName to generate an object of that type." << endl;
+    cout << "'q'   ...to exit" << endl;
+    cout << "RuleName->Symbol,AnotherSymbol,YetAnotherSymbol%weight   ...to define a rule" << endl;
+    cout << "!RuleName     ...to generate an object of that type." << endl;
+    cout << "#filename     ...to load all rules from this file." << endl;
+    cout << "$filename     ...to save all rules in this file." << endl;
     
     cout << endl;
     cout << "* Enter a seed: ";
@@ -50,12 +59,21 @@ int main (int argc, char** argv) {
             for(vector<string>::iterator it = genContent.begin(); it!=genContent.end(); ++it)
                 cout << *it << " ";
             cout << endl;
+        } else if(buf[0]=='#') {
+            cout << "Not implemented yet! :(" << endl;
+        } else if(buf[0]=='$') {
+            cout << "Not implemented yet! :(" << endl;
         } else {
+
+            // rule data
             string rule;
             vector<string> listOfSymbols;
+            float weightValue = 1.0f;
+
+            size_t pos = 0; // used to track spliting positions
             
-            // find rule delimeter
-            size_t pos = 0;
+            // find rule delimeter & rule string
+            
             pos = buf.find(RULE_DELIMETER);
             if(pos == string::npos) {
                 cout << "* Error adding generation rule!" << endl;
@@ -64,6 +82,21 @@ int main (int argc, char** argv) {
 
             rule = buf.substr(0,pos);
             string rest = buf.substr(pos + RULE_DELIMETER.length());
+
+
+
+            // find weight delimeter & weight value
+            pos = rest.find(WEIGHT_DELIMETER);
+            if(pos == string::npos) {
+                weightValue = 1.0f;
+            }
+
+            string weightString = rest.substr(pos + WEIGHT_DELIMETER.length(), string::npos);
+            rest.erase(pos, string::npos);
+            cout << weightString << endl;
+            weightValue = atof(weightString.c_str());
+
+
 
             // parse and add sybols to list
             string symbol;
@@ -74,13 +107,17 @@ int main (int argc, char** argv) {
                 rest.erase(0, pos + SYMBOL_DELIMETER.length());
             } while (pos != string::npos);
 
+
+            // add parsed data into the ruleset
+            rules.AddRule(rule, listOfSymbols, weightValue);
+
+
+
             #ifdef DEBUG
-                cout << "* Added the following rules: " << endl;
+                cout << "* Added " << rule << " of " << weightValue*100 << "% chance with symbols:" << endl;
                 for(vector<string>::iterator it = listOfSymbols.begin(); it!=listOfSymbols.end(); ++it)
                     cout << " " << *it << endl;
             #endif
-
-            rules.AddRule(rule, listOfSymbols, 1.0f);
         }
     }
     
