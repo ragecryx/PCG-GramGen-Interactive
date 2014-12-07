@@ -32,6 +32,7 @@ int main (int argc, char** argv) {
     cout << "RuleName->Symbol,AnotherSymbol%Weight   ...to define a rule" << endl;
     cout << "!RuleName     ...to generate an object of that type." << endl;
     cout << "#filename     ...to import all rules from this file." << endl;
+    cout << "*             ...to clear all current rules." << endl;
     
     cout << endl;
     cout << "* Enter a seed: ";
@@ -76,6 +77,8 @@ int main (int argc, char** argv) {
 
                 filestream.close();
             }
+        } else if(buf[0]=='*') {
+            rules = Ruleset();
         } else {
             ParseAddRule(buf, rules);
         }
