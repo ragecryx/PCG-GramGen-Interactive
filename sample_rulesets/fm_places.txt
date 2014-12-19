@@ -1,0 +1,15 @@
+PLACE->Castle Frostford
+PLACE->Pontybridge Town
+PLACE->Berxley
+PLACE->Blackpool City
+PLACE->Marren's Eve Crossroads
+PLACE->Wakefield
+PLACE->Orrenshire
+PLACE->Aysgarth City
+PLACE->Wolfden Village
+PLACE->Lockinge
+PLACE->Longdale Town
+PLACE->Auchendale
+PLACE->Bellmoral Falls
+PLACE->Wealdstone
+PLACE->Erith Castle

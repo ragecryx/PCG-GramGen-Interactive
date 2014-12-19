@@ -1,0 +1,18 @@
+BUILDING->house
+BUILDING->mansion
+BUILDING->shop
+BUILDING->tavern
+BUILDING->inn
+BUILDING->barn
+BUILDING->church
+BUILDING->mausoleum
+BUILDING->graveyard
+BUILDING->stable
+BUILDING->water-mill
+BUILDING->lighthouse
+BUILDING->watchtower
+BUILDING->wizards tower
+BUILDING->bridge
+BUILDING->castle
+BUILDING->quarry
+BUILDING->dungeon

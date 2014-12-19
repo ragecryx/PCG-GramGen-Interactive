@@ -1,0 +1,17 @@
+GROUP->a group of peasants
+GROUP->a group of farmers
+GROUP->a group of adventurers
+GROUP->a group of nobles
+GROUP->a caravan from the,PLACE
+GROUP->a group of citizens from,PLACE
+GROUP->a squad of,FACTION
+GROUP->a battalion of,FACTION
+GROUP->a brigade of,FACTION
+RPP_GROUP->religion
+RPP_GROUP->cult
+RPP_GROUP->sect
+RPP_GROUP->secret society
+FACTION->Pirates of the Withered Sea
+FACTION->Red-fang Knights
+FACTION->Noble Swordsmen of Berxley
+FACTION->The Empire

@@ -1,0 +1,39 @@
+ITEM->a brand new armor
+ITEM->a carrot
+ITEM->a forbidden alcoholic beverage
+ITEM->a forbidden tobacco
+ITEM->a book
+ITEM->a quil
+ITEM->a garment
+ITEM->a piece of armor
+ITEM->a shield
+ITEM->a mysterious dust
+ITEM->a suspicious barrel
+ITEMS->vegetables
+ITEMS->books
+ITEMS->quils
+ITEMS->garments
+ITEMS->weapons
+ITEMS->forbidden weapons
+ITEMS->suspicious barrels
+ITEMS->rare runestones
+RELIC->A map to a hidden artifact
+RELIC->An ancient amulet
+RELIC->A very rare tome of magic
+RELIC->An enchanted crystal orb
+RELIC->The Ring of Memories
+RELIC->A noble's legacy jewelry box
+RELIC->The Stick of Truth
+RELIC->A golden hairpin
+RELIC->A pair of handcrafted dragon boots
+RELIC->Krulgath's Great-Axe
+RELIC->An ancient coin
+RELIC->The mythic Dragon-tooth of Ulthar
+RELIC->Hellmare the Greatsword
+RELIC->The Chain of the Martyr
+RELIC->Lyath the Longbow
+RELIC->A small inscribed bell
+RELIC->The Staff of Eternal Fire
+RELIC->The Scepter of Nimble Water
+RELIC->A key of the Grand Keymaster
+RELIC->The Unshakable Shield

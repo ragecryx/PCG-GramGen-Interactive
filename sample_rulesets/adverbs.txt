@@ -1,0 +1,7 @@
+ADVERB_OF_PLACE->near
+ADVERB_OF_PLACE->outside
+ADVERB_OF_PLACE->around
+ADVERB_OF_PLACE->east of
+ADVERB_OF_PLACE->west of
+ADVERB_OF_PLACE->north of
+ADVERB_OF_PLACE->south of
